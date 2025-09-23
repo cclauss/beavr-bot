@@ -12,7 +12,7 @@ from typing import Any
 
 import draccus
 
-from beavr.teleop.common.config.loader import (
+from beavr.teleop.common.configs.loader import (
     Laterality,
     apply_yaml_preserving_cli,
     load_robot_config,
@@ -38,7 +38,7 @@ class MainConfig:
     laterality: str = "right"  # Options: "right", "left", "bimanual"
 
     # Optional config file override
-    config_file: str = "config/dev.yaml"
+    config_file: str = "configs/environment/dev.yaml"
 
     # Data storage configuration
     storage_path: str = "data/recordings"
@@ -62,6 +62,7 @@ class MainConfig:
         # Load robot configuration(s) using utility
         self.robot = load_robot_config(self.robot_name, self.laterality_enum)
 
+    # TODO: Remove this once we have a complete migration to the new structured config
     # Convenience attribute delegation for backward compatibility
     def __getattr__(self, item):
         """Delegate unknown attributes to teleop config for backward compatibility."""

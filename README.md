@@ -1,3 +1,5 @@
+https://github.com/ARCLab-MIT/beavr-bot/blob/f3b35a54ca263edf7f7521affb1022f9815de488/.github/workflows/full_tests.yml/badge.svg
+
 # BeaVR
 **Bimanual, multi-Embodiment, Accessible VR Teleoperation for Robots**
 

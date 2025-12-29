@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.5
+    rev: v0.13.2
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -13,4 +13,11 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell # See pyproject.toml for args
+        additional_dependencies:
+          - tomli
         args: [--maxkb=5000]
